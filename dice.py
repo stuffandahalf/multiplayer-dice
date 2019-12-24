@@ -18,8 +18,6 @@ def main(args):
     while line != '':
         players.append(line)
         line = input(USER_PROMPT(len(players) + 1))
-        
-    print(players)
     
     if len(players) == 0:
         print('You must have at least one player to roll the dice')
@@ -30,8 +28,7 @@ def main(args):
     line = input(ROLL_PROMPT())
     while line.upper() != 'N':
         print(ROLL_RESPONSE(players[index], roll))
-        index += 1
-        index %= len(players)
+        index = (index + 1) % len(players)
         roll = random.randint(1, max_dice)
         line = input(ROLL_PROMPT())
     
