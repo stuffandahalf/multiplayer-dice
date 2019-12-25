@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# compatibility imports
+from builtins import input
+
 import random
 
 def USER_PROMPT(user_id): return 'Set the name of player {}: '.format(user_id)
